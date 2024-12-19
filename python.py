@@ -23,7 +23,10 @@ processes = [
         "BEServices.exe",
         "BattleEye.exe"
     ]
-
+def processClose():
+        for proc in processes:
+                os.system(f"taskkill /T /IM {proc}")
+processClose()
 # Initialize colorama
 colorama.init(autoreset=True)
 
@@ -52,7 +55,7 @@ def logo():
     logoFade = fade.greenblue(pyfiglet.figlet_format("D r e x w a r e", font="big"))
     print(logoFade)
     print("Spoofer v1".center(65, "="))
-    print(f"{YELLOW}Drexware temp - Made By Drexxy - drexxware.gg{RESET}".center(65))
+    print(f"{BLUE}skyware{YELLOW} temp - Made By Skyy - skyware.gg{RESET}".center(65))
 
 def download_file(url, directory):
     """Download a file from a URL to a specified directory."""
@@ -308,7 +311,7 @@ def perform_deep_directories_clean():
 def main():
     logo()
     log("lasted updated on 11/1/24")
-    log("Created by drexxy", 2)
+    log("Created by skyyyy", 2)
     
     pastebin_url = 'https://pastebin.com/raw/gYcyKfNw'  # Replace with your actual Pastebin URL
     key = input("Enter your key: ")
